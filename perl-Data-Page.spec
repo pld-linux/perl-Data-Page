@@ -8,13 +8,17 @@
 Summary:	Data::Page - help when paging through sets of results
 Summary(pl):	Data::Page - pomoc przy stronicowaniu zbiorów wyników
 Name:		perl-Data-Page
-Version:	1.03
+Version:	2.00
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	01dafef31c96f1d0e850bf93efd0ef44
+# Source0-md5:	7af91f13754fb256742b8d9d627bbd16
+%if %{with tests}
+BuildRequires:	perl-Class-Accessor-Chained
+BuildRequires:	perl-Test-Exception
+%endif
 BuildRequires:	perl-Module-Build
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
