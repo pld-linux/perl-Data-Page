@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Data
-%define	pnam	Page
+%define		pdir	Data
+%define		pnam	Page
 Summary:	Data::Page - help when paging through sets of results
 Summary(pl):	Data::Page - pomoc przy stronicowaniu zbiorów wyników
 Name:		perl-Data-Page
