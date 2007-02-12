@@ -6,7 +6,7 @@
 %define		pdir	Data
 %define		pnam	Page
 Summary:	Data::Page - help when paging through sets of results
-Summary(pl):	Data::Page - pomoc przy stronicowaniu zbiorów wyników
+Summary(pl.UTF-8):   Data::Page - pomoc przy stronicowaniu zbiorÃ³w wynikÃ³w
 Name:		perl-Data-Page
 Version:	2.00
 Release:	1
@@ -37,15 +37,15 @@ number of entries per page, and the current page number. You can then
 call methods to find out how many pages of information there are, and
 what number the first and last entries on the current page really are.
 
-%description -l pl
-Przy przeszukiwaniu du¿ych ilo¶ci danych zwykle zwracany zbiór wyników
-jest wiêkszy ni¿ chcieliby¶my wy¶wietliæ na jednej stronie. Powoduje
-to chêæ podzielenia danych na strony. Obliczenia przy tym s± niestety
-nietrywialne i st±d ten modu³.
+%description -l pl.UTF-8
+Przy przeszukiwaniu duÅ¼ych iloÅ›ci danych zwykle zwracany zbiÃ³r wynikÃ³w
+jest wiÄ™kszy niÅ¼ chcielibyÅ›my wyÅ›wietliÄ‡ na jednej stronie. Powoduje
+to chÄ™Ä‡ podzielenia danych na strony. Obliczenia przy tym sÄ… niestety
+nietrywialne i stÄ…d ten moduÅ‚.
 
-G³ówn± ide± jest to, ¿e przekazuje siê liczbê wszystkich elementów,
-liczbê elementów na stronie i aktualny numer strony. Mo¿na wtedy
-wywo³ywaæ metody, aby okre¶liæ liczbê stron z informacjami oraz numer
+GÅ‚Ã³wnÄ… ideÄ… jest to, Å¼e przekazuje siÄ™ liczbÄ™ wszystkich elementÃ³w,
+liczbÄ™ elementÃ³w na stronie i aktualny numer strony. MoÅ¼na wtedy
+wywoÅ‚ywaÄ‡ metody, aby okreÅ›liÄ‡ liczbÄ™ stron z informacjami oraz numer
 pierwszego i ostatniego elementu na aktualnej stronie.
 
 %prep
