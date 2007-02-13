@@ -6,7 +6,7 @@
 %define		pdir	Data
 %define		pnam	Page
 Summary:	Data::Page - help when paging through sets of results
-Summary(pl.UTF-8):   Data::Page - pomoc przy stronicowaniu zbiorów wyników
+Summary(pl.UTF-8):	Data::Page - pomoc przy stronicowaniu zbiorów wyników
 Name:		perl-Data-Page
 Version:	2.00
 Release:	1
