@@ -9,7 +9,7 @@ Summary:	Data::Page - help when paging through sets of results
 Summary(pl.UTF-8):	Data::Page - pomoc przy stronicowaniu zbiorów wyników
 Name:		perl-Data-Page
 Version:	2.00
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -22,6 +22,7 @@ BuildRequires:	perl-Test-Exception
 BuildRequires:	perl-Module-Build
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+Requires:	perl-Class-Accessor-Chained
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
