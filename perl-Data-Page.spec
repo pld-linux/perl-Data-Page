@@ -1,10 +1,10 @@
 #
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
-#
-%include	/usr/lib/rpm/macros.perl
+
 %define		pdir	Data
 %define		pnam	Page
+%include	/usr/lib/rpm/macros.perl
 Summary:	Data::Page - help when paging through sets of results
 Summary(pl.UTF-8):	Data::Page - pomoc przy stronicowaniu zbiorów wyników
 Name:		perl-Data-Page
@@ -15,13 +15,14 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	57f9aed8a79687a2712adf7bf2f9cc4d
+URL:		http://search.cpan.org/dist/Data-Page/
+BuildRequires:	perl-Module-Build
+BuildRequires:	perl-devel >= 1:5.8.0
+BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
 BuildRequires:	perl-Class-Accessor-Chained
 BuildRequires:	perl-Test-Exception
 %endif
-BuildRequires:	perl-Module-Build
-BuildRequires:	perl-devel >= 1:5.8.0
-BuildRequires:	rpm-perlprov >= 4.1-13
 Requires:	perl-Class-Accessor-Chained
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -29,7 +30,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 When searching through large amounts of data, it is often the case
 that a result set is returned that is larger than we want to display
-on one page.  This results in wanting to page through various pages of
+on one page. This results in wanting to page through various pages of
 data. The maths behind this is unfortunately fiddly, hence this
 module.
 
