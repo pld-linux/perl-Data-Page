@@ -8,13 +8,13 @@
 Summary:	Data::Page - help when paging through sets of results
 Summary(pl.UTF-8):	Data::Page - pomoc przy stronicowaniu zbiorów wyników
 Name:		perl-Data-Page
-Version:	2.02
+Version:	2.03
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	57f9aed8a79687a2712adf7bf2f9cc4d
+# Source0-md5:	bd1fb9f7d69bf804132201c3e6a1c80a
 URL:		http://search.cpan.org/dist/Data-Page/
 BuildRequires:	perl-Module-Build
 BuildRequires:	perl-devel >= 1:5.8.0
@@ -54,23 +54,23 @@ pierwszego i ostatniego elementu na aktualnej stronie.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Build.PL \
-	installdirs=vendor \
-	destdir=$RPM_BUILD_ROOT
+%{__perl} Makefile.PL \
+        INSTALLDIRS=vendor
+%{__make}
 
-./Build
-%{?with_tests:./Build test}
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-./Build install
+%{__make} install \
+        DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGES README
+%doc Changes README
 %{perl_vendorlib}/Data/Page.pm
 %{_mandir}/man3/*
